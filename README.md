@@ -139,7 +139,15 @@ press CTRL+X, CTRL+Y, and Enter to save
 ## Generate dataset
 <pre>python generate_movie_reviews_dataset.py</pre>
 
-It should show something like this with the last line showing the location of the dataset
+It should show something like this with the last line showing the location of the dataset:
+
+2025-05-19 09:36:14,706 - INFO - Saved chunk 99
+
+2025-05-19 09:36:14,710 - INFO - Generating chunk 100/101...
+
+2025-05-19 09:36:15,909 - INFO - Saved chunk 100
+
+2025-05-19 09:36:15,910 - INFO - Dataset saved to /home/wizard/nlp_dataset/large_nlp_dataset.csv
 
 ## Verify output
 <pre>ls -lh movie_reviews_dataset.csv
@@ -149,5 +157,7 @@ wc -l movie_reviews_dataset.csv</pre>
 <pre>head movie_reviews_dataset.csv</pre>
 
 You now have your dataset
+
 Navigate to the folder, copy file and upload on Sahara
-For windows users using WSL, click <pre>\\wsl$</pre> in the search bar enter Ubuntu and navigate to the path shown in the last line after the dataset generation 
+
+For windows users using WSL, click `\\wsl$` in the search bar, enter Ubuntu folder and navigate to the path shown in the last line after the dataset generation 
