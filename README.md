@@ -1,52 +1,55 @@
-# Create-datasets
+# Creating A Movie Review Dataset
 
-##INSTALL PYTHON
 ## Update Packages
-sudo apt update
+<pre>sudo apt update</pre>
 
 ## Install Prerequisites
-sudo apt install -y software-properties-common
+<pre>sudo apt install -y software-properties-common</pre>
 
 ## Add Deadsnakes PPA
-sudo add-apt-repository ppa:deadsnakes/ppa
+<pre>sudo add-apt-repository ppa:deadsnakes/ppa</pre>
 
 ## Update again
-sudo apt update
+<pre>sudo apt update</pre>
 
 ## Install Python 3.13
-sudo apt install -y python3.13 python3.13-dev python3.13-venv
+<pre>sudo apt install -y python3.13 python3.13-dev python3.13-venv</pre>
 
 ## Install Pip
-sudo apt install -y python3-pip
+<pre>sudo apt install -y python3-pip</pre>
 
 ## Verify Python and Pip Installation
-python3.13 --version
-python3.13 -m pip --version
+<pre>python3.13 --version
+python3.13 -m pip --version</pre>
+
+should show Python and Pip versions
 
 ## Test Python
-python3.13 -c "print('Hello, World!')"
+<pre>python3.13 -c "print('Hello, World!')"</pre>
+
+should output Hello World
 
 ## Create a Virtual Environment
-python3.13 -m venv datasets_env
-source datasets_env/bin/activate
+<pre>python3.13 -m venv datasets_env
+source datasets_env/bin/activate</pre>
 
 ## Install dependencies
-pip install pandas faker
+<pre>pip install pandas faker</pre>
 
 ## Verify dependencies 
-pip list
+<pre>pip list</pre>
 
 should list pandas, faker, numpy
 
 ## Create directory
-mkdir -p ~/dataset
-cd ~/dataset
+<pre>mkdir -p ~/dataset
+cd ~/dataset</pre>
 
 ## Open text editor
-nano generate_dataset.py
+<pre>nano generate_movie_reviews_dataset.py</pre>
 
 ## Input this code
-import pandas as pd
+<pre>import pandas as pd
 import random
 from faker import Faker
 import os
@@ -126,24 +129,25 @@ def generate_dataset():
         raise
 
 if __name__ == "__main__":
-    generate_dataset()
-
-print("Movie review dataset (10,000 entries) saved as 'movie_reviews_dataset.csv'")
+    generate_dataset()</pre>
 
 press CTRL+X, CTRL+Y, and Enter to save
 
 ## Verify file is in directory
-ls
+<pre>ls</pre>
 
 ## Generate dataset
-python generate_dataset.py
+<pre>python generate_movie_reviews_dataset.py</pre>
 
 It should show something like this with the last line showing the location of the dataset
 
 ## Verify output
-ls -lh large_nlp_dataset.csv
-head large_nlp_dataset.csv
+<pre>ls -lh movie_reviews_dataset.csv
+wc -l movie_reviews_dataset.csv</pre>
+
+## Show Preview
+<pre>head movie_reviews_dataset.csv</pre>
 
 You now have your dataset
-Navigate to the folder copy and upload 
-For windows users using WSL, click \\wsl$ in the search bar enter Ubuntu and navigate to the path shown in the last line after the dataset generation 
+Navigate to the folder, copy file and upload on Sahara
+For windows users using WSL, click <pre>\\wsl$</pre> in the search bar enter Ubuntu and navigate to the path shown in the last line after the dataset generation 
